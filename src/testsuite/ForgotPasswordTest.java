@@ -28,7 +28,7 @@ public class ForgotPasswordTest extends BaseTest {
     public void userShouldNavigateToForgotPasswordPageSuccessfully() {
         driver.findElement(By.className("orangehrm-login-forgot")).click();
         String expectedText = "Reset Password";
-        String actualText = driver.findElement(By.xpath("//div[@id=\"app\"]/div[1]/div[1]/div/form/h6")).getText();
+        String actualText = driver.findElement(By.xpath("//h6[text()='Reset Password']")).getText();
         Assert.assertEquals(expectedText, actualText);
     }
 
